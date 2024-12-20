@@ -31,6 +31,11 @@ def main():
 
         if option == '1':
             my_person = create_person()
+            # Toon alle methoden van het Person-object
+            print(my_person.walk())
+            print(my_person.eat("Brussels sprouts"))
+            print(my_person.eat(my_person.favourite_food))
+            print(my_person.sleep())
             print("\nHello, my name is {}. I'm a {}-year-old {} and I'm {}.".format(
                 my_person.name, my_person.age, my_person.gender, my_person.bmi()))
             print(f"My favourite food is {my_person.favourite_food}, and I work as a {my_person.occupation}.")
