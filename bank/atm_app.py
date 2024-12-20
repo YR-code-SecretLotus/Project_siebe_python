@@ -44,28 +44,34 @@ def main():
     print("******************************")
     print("******************************")
     # Print het saldo van de rekening
-    print_balance(account)
-
+    print("******************************")
+    print(f"**   Your balance: {account.balance}      **")
+    print("******************************")
 
     # Welkom-menu voor de gebruiker
     while True:
-        print("\nChoose an option:")
-        print("*1. Deposit      *")
-        print("*2. Withdraw     *")
-        print("*3. Exit         *")
-
-        choice = input("Enter choice: ")
+        print("*1. Deposit                  *")
+        print("*2. Withdraw                 *")
+        print("*3. Exit                     *")
+        print("******************************")
+        choice = input("Select an option (1-3): ")
 
         if choice == "1":
+            print("******************************")
             amount = float(input("Enter amount to deposit: "))
             account.deposit(amount)
             print_balance(account)
+            print("******************************")
         elif choice == "2":
+            print("******************************")
             amount = float(input("Enter amount to withdraw: "))
             account.withdraw(amount)
             print_balance(account)
+            print("******************************")
         elif choice == "3":
-            print("*    shutting down...    *")
+            print("******************************")
+            print("*        shutting down...    *")
+            print("******************************")
             break
         else:
             print("Invalid choice, please try again.")
