@@ -45,7 +45,7 @@ def main():
     print("******************************")
     # Print het saldo van de rekening
     print("******************************")
-    print(f"**   Your balance: {account.balance}      **")
+    print(f"**   Your balance: €{account.balance}     **")
     print("******************************")
 
     # Welkom-menu voor de gebruiker
@@ -58,13 +58,13 @@ def main():
 
         if choice == "1":
             print("******************************")
-            amount = float(input("Enter amount to deposit: "))
+            amount = float(input("Enter amount to deposit (euro): "))
             account.deposit(amount)
             print_balance(account)
             print("******************************")
         elif choice == "2":
             print("******************************")
-            amount = float(input("Enter amount to withdraw: "))
+            amount = float(input("Enter amount to withdraw (euro): "))
             account.withdraw(amount)
             print_balance(account)
             print("******************************")
